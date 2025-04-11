@@ -1,2 +1,2 @@
-# CyberMCP
-Collection of cybersecurity related MCP servers
+# OSV MCP
+MCP Server with integration to OSV Database API
