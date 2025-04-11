@@ -4,8 +4,6 @@
 
 A lightweight MCP (Model Context Protocol) server for OSV Database API.
 
-![mcp-client-and-servers|648x499](https://www.openlinksw.com/data/screenshots/mcp-architecture.png)
-
 ---
 
 ## Features
