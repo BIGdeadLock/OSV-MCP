@@ -5,7 +5,7 @@ A lightweight MCP (Model Context Protocol) server for OSV Database API.
 
 Example:
 
-![demo](assets/demo.mov)
+[![demo](assets/demo.mov)](https://github.com/user-attachments/assets/766aca23-5ecd-4997-b700-3bc5199f7558)
 
 
 ---
