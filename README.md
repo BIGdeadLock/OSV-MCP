@@ -1,8 +1,12 @@
----
 
 # MCP Server For OSV 
 
 A lightweight MCP (Model Context Protocol) server for OSV Database API.
+
+Example:
+
+![demo](assets/demo.mov)
+
 
 ---
 
