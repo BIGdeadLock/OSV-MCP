@@ -56,7 +56,7 @@ For **Cursor** users:
     }
   }
 }
-}
+
 ```
 ---
 
