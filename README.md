@@ -36,15 +36,6 @@ https://github.com/user-attachments/assets/55bb887f-3ead-4733-8328-572d3f3145fd
 
 ---
 
-## Installation
-
-Clone this repository:
-```bash
-git clone https://github.com/BIGdeadLock/OSV-MCP.git
-cd src
-```
----
-
 ## Configuration
 
 For **Cursor** users:
