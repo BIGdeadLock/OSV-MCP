@@ -1,5 +1,5 @@
-
 # MCP Server For OSV 
+[![smithery badge](https://smithery.ai/badge/@EdenYavin/OSV-MCP)](https://smithery.ai/server/@EdenYavin/OSV-MCP)
 
 A lightweight MCP (Model Context Protocol) server for OSV Database API.
 
@@ -86,3 +86,13 @@ For **Cursor** users:
   - Returns a list of fixed version strings
 
 ---
+
+## Installation
+
+### Installing via Smithery
+
+To install OSV Database API Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@EdenYavin/OSV-MCP):
+
+```bash
+npx -y @smithery/cli install @EdenYavin/OSV-MCP --client claude
+```
