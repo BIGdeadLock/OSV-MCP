@@ -45,7 +45,7 @@ For **Cursor** users:
   "mcpServers": {
     "osv-mcp": {
       "command": "uv",
-      "args": ["--directory", "/Users/eden.yavin/Projects/OSV-MCP", "run", "osv-server"],
+      "args": ["--directory", "path-to/OSV-MCP", "run", "osv-server"],
       "env": {}
     }
   }
