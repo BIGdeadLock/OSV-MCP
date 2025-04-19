@@ -66,6 +66,12 @@ Example:
 
 ---
 
+## Tested on
+
+- [X] Cursor
+- [X] Claude
+
+---
 ## Installation
 
 
@@ -74,15 +80,10 @@ Example:
 npx -y @smithery/cli install @EdenYavin/OSV-MCP --client claude
 ```
 
----
+2. Locally:
 
-## Tested on
-
-- [X] Cursor
-- [X] Claude
-
-
-### Configuration:
+    1. Clone the repo: ```https://github.com/EdenYavin/OSV-MCP.git```
+    2. Configure your MCP Host (Cusrsor / Claude Desktop etc.):
 
 ```json
 {
