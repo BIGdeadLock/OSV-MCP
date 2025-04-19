@@ -9,12 +9,41 @@ Example:
 
 
 ---
+## Tools Provided
 
-## Features
+### Overview
+|name|description|
+|---|---|
+|query_package_cve|List all the CVE IDs for a specific package. Specific version can be passed as well for more narrow scope CVE IDs.|
+|query_for_cve_affected|Query the OSV database for a CVE and return all affected versions of the package.|
+|query_for_cve_fix_versions|Query the OSV database for a CVE and return all versions that fix the vulnerability.|
+|get_ecosystems|Query the MCP for current supported ecosystems.
 
-- **Get Package CVEs**: Fetch all CVEs related to a package.
-- **Get CVE Affected Versions**: Fetch all the affected versions for a specific CVE-ID.
-- **Get CVE Fix Versions**: Fetch all the versions that remediate the CVE.
+### Detailed Description
+
+- **query_package_cve**
+  - Query the OSV database for a package and return the CVE IDs.
+  - Input parameters:
+    - `package` (string, required): The package name to query
+    - `version` (string, optional): The version of the package to query. If not specified, queries all versions
+    - `ecosystem` (string, optional): The ecosystem of the package. Defaults to "PyPI" for Python packages
+  - Returns a list of CVE IDs with their details
+
+- **query_for_cve_affected**
+  - Query the OSV database for a CVE and return all affected versions.
+  - Input parameters:
+    - `cve` (string, required): The CVE ID to query (e.g., "CVE-2018-1000805")
+  - Returns a list of affected version strings
+
+- **query_for_cve_fix_versions**
+  - Query the OSV database for a CVE and return all versions that fix the vulnerability.
+  - Input parameters:
+    - `cve` (string, required): The CVE ID to query (e.g., "CVE-2018-1000805")
+  - Returns a list of fixed version strings
+
+- **get_ecosystems**
+  - Query for all current supported ecosystems by the MCP servers.
+  - Return a dict with the key being the ecosystem name and the value the programming language / OS.
 
 ---
 
@@ -39,16 +68,23 @@ Example:
 
 ## Installation
 
-Clone this repository:
+
+1. Via [Smithery](https://smithery.ai/server/@EdenYavin/OSV-MCP):
 ```bash
-git clone https://github.com/BIGdeadLock/OSV-MCP.git
-cd src
+npx -y @smithery/cli install @EdenYavin/OSV-MCP --client claude
 ```
+
 ---
 
-## Configuration
+## Tested on
 
-For **Cursor** users:
+- [X] Cursor
+- [X] Claude
+
+
+### Configuration:
+
+* For **Cursor** users:
 
 ```json
 {
@@ -62,37 +98,8 @@ For **Cursor** users:
 }
 
 ```
----
-
-## Tools Provided
-
-### Overview
-|name|description|
-|---|---|
-|query_package_cve|List all the CVE IDs for a specific package. Specific version can be passed as well for more narrow scope CVE IDs.|
-|query_for_cve_affected|Query the OSV database for a CVE and return all affected versions of the package.|
-|query_for_cve_fix_versions|Query the OSV database for a CVE and return all versions that fix the vulnerability.|
-
-### Detailed Description
-
-- **query_package_cve**
-  - Query the OSV database for a package and return the CVE IDs.
-  - Input parameters:
-    - `package` (string, required): The package name to query
-    - `version` (string, optional): The version of the package to query. If not specified, queries all versions
-    - `ecosystem` (string, optional): The ecosystem of the package. Defaults to "PyPI" for Python packages
-  - Returns a list of CVE IDs with their details
-
-- **query_for_cve_affected**
-  - Query the OSV database for a CVE and return all affected versions.
-  - Input parameters:
-    - `cve` (string, required): The CVE ID to query (e.g., "CVE-2018-1000805")
-  - Returns a list of affected version strings
-
-- **query_for_cve_fix_versions**
-  - Query the OSV database for a CVE and return all versions that fix the vulnerability.
-  - Input parameters:
-    - `cve` (string, required): The CVE ID to query (e.g., "CVE-2018-1000805")
-  - Returns a list of fixed version strings
 
 ---
+
+**Leave a review on [VibeApp](https://www.vibeapp.store/app/vulnerability-osv-mcp-server)
+if you enjoyed it :)!**

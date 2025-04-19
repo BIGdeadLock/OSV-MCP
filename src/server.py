@@ -103,6 +103,18 @@ mcp = FastMCP("OSV Database API MCP Server")
 
 
 @mcp.tool()
+def get_ecosystems():
+    """
+    Get all supported ecosystems. An ecosystem is a package manager or repository for a specific language.
+
+    Returns:
+    Dictionary of ecosystems with the key being the ecosystem name and the value being the programming language / OS.
+
+    To use the ecosystem name in the query_package_cve function, you must use the exact ecosystem name as it is in the dictionary.
+    """
+    return {"PyPI": "python", "npm": "javascript", "RubyGems": "ruby", "Maven": "java", "NuGet": "c#"}
+
+@mcp.tool()
 def query_package_cve(package: str, version: str = None, ecosystem: str = "PyPI"):
     """
     Query the OSV database for a package and return the CVE ID.
@@ -111,8 +123,9 @@ def query_package_cve(package: str, version: str = None, ecosystem: str = "PyPI"
         package: The package name to query
         version: The version of the package to query, can be None if you want to query all versions
         ecosystem: The ecosystem of the package to query, can be None if you want to query all ecosystems. 
-        * Supported ecosystems:
-         - For python packages, the ecosystem is "PyPI"
+        
+        * For supported ecosystems, see the get_ecosystems tool.
+
     Returns:
         A list of CVE IDs
     """
