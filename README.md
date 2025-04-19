@@ -84,14 +84,12 @@ npx -y @smithery/cli install @EdenYavin/OSV-MCP --client claude
 
 ### Configuration:
 
-* For **Cursor** users:
-
 ```json
 {
   "mcpServers": {
     "osv-mcp": {
       "command": "uv",
-      "args": ["--directory", "/Users/eden.yavin/Projects/OSV-MCP", "run", "osv-server"],
+      "args": ["--directory", "path-to/OSV-MCP", "run", "osv-server"],
       "env": {}
     }
   }
