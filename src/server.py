@@ -78,7 +78,7 @@ class OSVServer:
         for vuln in data['vulns']:
             cve_id = re.search(r'CVE-(\d+)-(\d+)', str(vuln))
             if cve_id:
-                cves.append({cve_id.group(0): vuln['details']})
+                cves.append({cve_id.group(0): {"details": vuln['details'], "severity": vuln['severity']}})
         return cves
     
     def query_for_cve_affected(self, cve: str):
@@ -118,6 +118,9 @@ def get_ecosystems():
 def query_package_cve(package: str, version: str = None, ecosystem: str = "PyPI"):
     """
     Query the OSV database for a package and return the CVE ID.
+    You can use this tool to get the CVE ID for a package. 
+    ALWAYS use it before installing packages to check if the package is vulnerable. For example in requirements.txt, pyproject.toml, uv.lock, etc.
+    You can also use it to check if the package is vulnerable before updating the package.
 
     Args:
         package: The package name to query
